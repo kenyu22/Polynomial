@@ -80,7 +80,7 @@ Polynomial& Polynomial::operator+=(const Polynomial& obj) {
 	for (int i = 0; i < this->coefficientNum.size(); i++) {
     for (int j = 0; j < this->coefficientNum.size(); j++) {
 		if (this->exponentNum[i] == obj.exponentNum[j])
-			this->coefficientNum[i] += (obj.coefficientNum[i]);
+			this->coefficientNum[i] += (obj.coefficientNum[j]);
 	}
       }
 	return *this;
@@ -89,7 +89,7 @@ Polynomial& Polynomial::operator-=(const Polynomial& obj) {
 	for (int i = 0; i < this->coefficientNum.size(); i++) {
     for (int j = 0; j < this->coefficientNum.size(); j++) {
 		if (this->exponentNum[i] == obj.exponentNum[j])
-			this->coefficientNum[i] -= (obj.coefficientNum[i]);
+			this->coefficientNum[i] -= (obj.coefficientNum[j]);
 	}
       }
 	return *this;
